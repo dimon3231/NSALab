@@ -15,10 +15,10 @@ provider "yandex" {
 }
 
 resource "yandex_resourcemanager_cloud_iam_binding" "admin" {
-    cloud_id    = "b1gdoa22q40ihgrf3cc1"
-    role        = "storage.editor"
-    members     = [
+  cloud_id = "b1gdoa22q40ihgrf3cc1"
+  role     = "storage.editor"
+  members = [
     "serviceAccount:ajelguvuftg771n1hih6",
-    ]
+  ]
 }
 

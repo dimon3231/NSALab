@@ -4,8 +4,8 @@ resource "yandex_iam_service_account" "sa" {
 
 // Назначение роли сервисному аккаунту
 resource "yandex_resourcemanager_folder_iam_member" "sa-editor" {
-  role   = "storage.editor"
-  member = "serviceAccount:${yandex_iam_service_account.sa.id}"
+  role      = "storage.editor"
+  member    = "serviceAccount:${yandex_iam_service_account.sa.id}"
   folder_id = "b1g9vrtrrnnt93cet0q5"
 }
 
