@@ -22,3 +22,26 @@ resource "yandex_resourcemanager_cloud_iam_binding" "admin" {
   ]
 }
 
+resource "yandex_compute_instance" "vm-1" {
+  name = "CML2"
+
+  resources {
+    cores  = 4
+    memory = 8
+  }
+
+  boot_disk {
+    initialize_params {
+      image_id = "fd87va5cc00gaq2f5qfb"
+    }
+  }
+
+  network_interface {
+    subnet_id = yandex_vpc_subnet.subnet-1.id
+    nat       = true
+  }
+
+  metadata = {
+    ssh-keys = "ubuntu:${file("~/.ssh/id_rsa.pub")}"
+  }
+}
