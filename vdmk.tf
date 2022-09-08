@@ -1,5 +1,5 @@
 resource "yandex_iam_service_account" "sa" {
-  name = "CML2"
+  name = "cml2"
 }
 
 // Назначение роли сервисному аккаунту
@@ -16,9 +16,9 @@ resource "yandex_iam_service_account_static_access_key" "sa-static-key" {
 }
 
 // Создание бакета с использованием ключа
-resource "yandex_storage_bucket" "test" {
+resource "yandex_storage_bucket" "bucket" {
   access_key = yandex_iam_service_account_static_access_key.sa-static-key.access_key
   secret_key = yandex_iam_service_account_static_access_key.sa-static-key.secret_key
-  bucket     = "bucket1"
+  bucket     = "bucketforcml"
   max_size   = 0
 }
