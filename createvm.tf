@@ -20,7 +20,7 @@ resource "yandex_compute_instance" "vm-cml2" {
   }
 
   metadata = {
-    ssh-keys = "<имя пользователя>:<содержимое SSH-ключа>"
+    ssh-keys = "sysadmin:<содержимое SSH-ключа>"
   }
 }
 
