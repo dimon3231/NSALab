@@ -1,6 +1,6 @@
 resource "yandex_compute_instance" "vm-cml2" {
 
-  name        = "CML2"
+  name        = "cml2"
   platform_id = "standard-v3"
 
   resources {
