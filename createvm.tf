@@ -10,7 +10,7 @@ resource "yandex_compute_instance" "vm-cml2" {
 
   boot_disk {
     initialize_params {
-      image_id = "${yandex_compute_image.image-1.id}"
+      image_id = "${yandex_compute_image.image-os.id}"
     }
   }
 
