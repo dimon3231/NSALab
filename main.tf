@@ -12,4 +12,5 @@ provider "yandex" {
   cloud_id  = "b1gdoa22q40ihgrf3cc1"
   folder_id = "b1g9vrtrrnnt93cet0q5"
   zone      = "ru-central1-a"
+  max_retries = 600
 }
